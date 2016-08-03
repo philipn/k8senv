@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='k8env',
-    version='0.1.0',
+    version='0.1.1',
     url='http://github.com/philipn/k8env',
     license='MIT',
     description='A simple way to manage different Kubernetes contexts',
