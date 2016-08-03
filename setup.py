@@ -6,6 +6,7 @@ setup(
     url='http://github.com/philipn/k8env',
     license='MIT',
     description='A simple way to manage different Kubernetes contexts',
+    long_description=open('README.md').read(),
     author='Philip Neustrom',
     author_email='philipn@gmail.com',
     zip_safe=False,
