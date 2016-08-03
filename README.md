@@ -27,6 +27,10 @@ Now any calls to `kubectl` will use that context.
 
 To stop using that context, simply exit the subshell.
 
+To list available contexts:
+
+    $ k8env --list
+
 
 License
 -------
