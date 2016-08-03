@@ -2,9 +2,23 @@
 
 USAGE="k8env manages Kubernetes contexts.
 
-usage: k8env [-h] CONTEXT"
+usage: k8env [--help] [OPTIONS] CONTEXT
 
-if [ -z "$1" ]; then
+Options:
+
+    --list: List all available contexts.
+"
+
+function list_context() {
+    kubectl config view --output=json | python -c "import json; import sys; print(json.dumps(json.loads(sys.stdin.read()).get('contexts', {}), indent=4))"
+}
+
+if [ "$1" == "--list" ] || [ "$1" == "-l" ]; then
+    list_context;
+    exit;
+fi;
+
+if [ -z "$1" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
     echo "$USAGE";
     exit;
 fi;
