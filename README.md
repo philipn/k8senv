@@ -23,9 +23,7 @@ To start using a Kubernetes context:
 
     $ k8env <context>
 
-Now any calls to `kubectl` will use that context.
-
-To stop using that context, simply exit the subshell.
+Now any calls to `kubectl` within your shell will use that context.
 
 To list available contexts:
 
