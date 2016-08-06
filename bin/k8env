@@ -32,7 +32,7 @@ NEW_PS1="(k8:$KUBECONTEXT)$PREV_PS1";
 
 
 bash --init-file <(echo "
-    alias kubectl='`which kubectl` --context $KUBECONTEXT';
+    alias kubectl="$(which kubectl) --context $KUBECONTEXT";
     export PREV_PS1='$PREV_PS1';
     export PS1='$NEW_PS1';
 ") -i
