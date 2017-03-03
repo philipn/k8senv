@@ -1,8 +1,8 @@
 #!/bin/bash -i
 
-USAGE="k8env manages Kubernetes contexts.
+USAGE="k8senv manages Kubernetes contexts.
 
-usage: k8env [--help] [OPTIONS] CONTEXT
+usage: k8senv [--help] [OPTIONS] CONTEXT
 
 Options:
 
@@ -28,14 +28,14 @@ KUBECONTEXT=$1
 if [ -z "$PREV_PS1" ]; then
     PREV_PS1="$PS1";
 fi;
-NEW_PS1="(k8:$KUBECONTEXT)$PREV_PS1";
+NEW_PS1="(k8s:$KUBECONTEXT)$PREV_PS1";
 
 echo "
     alias kubectl='$(which kubectl) --context $KUBECONTEXT';
     export PREV_PS1='$PREV_PS1';
     export PS1='$NEW_PS1';
-" > ~/.k8env_init
+" > ~/.k8senv_init
 
-bash --init-file ~/.k8env_init -i
+bash --init-file ~/.k8senv_init -i
 
-rm ~/.k8env_init
+rm ~/.k8senv_init

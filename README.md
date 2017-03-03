@@ -1,10 +1,10 @@
-`k8env` is a simple way to manage your different Kubernetes contexts.
+`k8senv` is a simple way to manage your different Kubernetes contexts.
 
 
 Installation
 ------------
 
-    $ pip install k8env
+    $ pip install k8senv
 
 It's recommended to remove your default Kubernetes context, so you don't
 accidentially invoke it:
@@ -21,19 +21,19 @@ Usage
 
 To start using a Kubernetes context:
 
-    $ k8env <context>
+    $ k8senv <context>
 
 Now any calls to `kubectl` within your shell will use that context.
 
 To list available contexts:
 
-    $ k8env --list
+    $ k8senv --list
 
 
 License
 -------
 
-Copyright (c) 2016 Shotwell Labs, Inc.
+Copyright (c) 2016-2017 Shotwell Labs, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
