@@ -1,5 +1,8 @@
 `k8senv` is a simple way to manage your different Kubernetes contexts.
 
+**NOTE**: `kubectl` can now mostly do this with the `kubectl config use-context` and
+`kubectl config get-contexts` commands.
+
 
 Installation
 ------------
